@@ -3,6 +3,8 @@ input.addEventListener("input", converter);
 
 function converter() {
   let value = parseFloat(document.querySelector("input").value);
+  let totalCentsText = document.querySelector(".total-cents-text");
+
   if (typeof value === "number" && value >= 0) {
     const valueDollar = value * 100;
 
@@ -17,7 +19,6 @@ function converter() {
 
     const penny = Math.floor(remainder);
 
-    let totalCentsText = document.querySelector('.total-cents-text');
     totalCentsText.innerHTML = `${Math.round(valueDollar)} ¢`;
     let coinsDiv = document.querySelector(".coins");
 
@@ -28,6 +29,8 @@ function converter() {
 
     // let quarterHTML = document.querySelector(".quarter");
     // quarterHTML.innerHTML = quarter;
+  } else {
+    // console.log('n é numero')
+    totalCentsText.innerHTML = `0`;
   }
-  // console.log('n é numero')
 }
