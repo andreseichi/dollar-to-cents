@@ -4,7 +4,6 @@ input.addEventListener("input", converter);
 function converter() {
   let value = parseFloat(document.querySelector("input").value);
   if (typeof value === "number" && value >= 0) {
-    // Total of Dollar
     const valueDollar = value * 100;
 
     const quarter = Math.floor(valueDollar / 25);
@@ -18,14 +17,14 @@ function converter() {
 
     const penny = Math.floor(remainder);
 
-    console.log(this.value);
-
+    let totalCentsText = document.querySelector('.total-cents-text');
+    totalCentsText.innerHTML = `${Math.round(valueDollar)} ¢`;
     let coinsDiv = document.querySelector(".coins");
 
-    coinsDiv.innerHTML = `<h2 class="quarter">${quarter}</h2>
-    <h2 class="dime">${dime}</h2>
-    <h2 class="nickel">${nickel}</h2>
-    <h2 class="penny">${penny}</h2>`;
+    coinsDiv.innerHTML = `<h2 class="quarter">${quarter} quarter (25 ¢)</h2>
+    <h2 class="dime">${dime} dime (10 ¢)</h2>
+    <h2 class="nickel">${nickel} nickel (5 ¢)</h2>
+    <h2 class="penny">${penny} penny (1 ¢)</h2>`;
 
     // let quarterHTML = document.querySelector(".quarter");
     // quarterHTML.innerHTML = quarter;
