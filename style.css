@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 90%;
+    margin: auto;
+    min-height: 100vh;
+    background: rgb(69, 140, 153);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.coins {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
