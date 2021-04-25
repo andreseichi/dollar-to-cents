@@ -12,29 +12,25 @@ function converter() {
   if (typeof valueTotal === "number" && valueTotal >= 0) {
     const quarter = Math.floor(valueTotal / 25);
     let remainder = valueTotal % 25;
-
     const dime = Math.floor(remainder / 10);
     remainder = remainder % 10;
-
     const nickel = Math.floor(remainder / 5);
     remainder = remainder % 5;
-
     const penny = Math.floor(remainder);
 
-    totalCentsText.innerHTML = `${Math.round(valueTotal)} ¢`;
+    totalCentsText.innerHTML = `${valueTotal} ¢`;
     // let coinsDiv = document.querySelector(".coins");
     // coinsDiv.innerHTML = `<h2 class="quarter">${quarter} quarter (25 ¢)</h2>
     // <h2 class="dime">${dime} dime (10 ¢)</h2>
     // <h2 class="nickel">${nickel} nickel (5 ¢)</h2>
     // <h2 class="penny">${penny} penny (1 ¢)</h2>`;
 
-    console.log(penny);
-    quarterValue.innerHTML = `${quarter} a`;
-    dimeValue.innerHTML = `${dime} a`;
-    nickelValue.innerHTML = `${nickel} a`;
-    pennyValue.innerHTML = `${penny} a`;
+    quarterValue.innerHTML = `${quarter}`;
+    dimeValue.innerHTML = `${dime}`;
+    nickelValue.innerHTML = `${nickel}`;
+    pennyValue.innerHTML = `${penny}`;
   } else {
-    // console.log('n é numero')
-    totalCentsText.innerHTML = `0`;
+    console.log("n é numero");
+    totalCentsText.innerHTML = `It's not a number`;
   }
 }
