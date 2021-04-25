@@ -31,6 +31,6 @@ function converter() {
     pennyValue.innerHTML = `${penny}`;
   } else {
     console.log("n é numero");
-    totalCentsText.innerHTML = `It's not a number`;
+    totalCentsText.innerHTML = `It's not a valid number`;
   }
 }
