@@ -8,7 +8,7 @@ let pennyValue = document.querySelector(".penny-value");
 
 let totalCentsText = document.querySelector(".total-cents-text");
 function converter() {
-  let valueTotal = Math.round(document.querySelector("input").value * 100);
+  let valueTotal = Math.round(document.querySelector("input").value.replace(',', '.') * 100);
   if (typeof valueTotal === "number" && valueTotal >= 0) {
     const quarter = Math.floor(valueTotal / 25);
     let remainder = valueTotal % 25;
