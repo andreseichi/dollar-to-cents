@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Alegreya', serif;
+  font-family: "Alegreya", serif;
 }
 
 body {
@@ -72,7 +72,11 @@ p {
 }
 
 .card {
-  background: linear-gradient(90deg, rgba(86,128,190,0.5256477591036415) 3%, rgba(110,143,190,0.43601190476190477) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(86, 128, 190, 0.5256477591036415) 3%,
+    rgba(110, 143, 190, 0.43601190476190477) 100%
+  );
   margin: 2rem;
   border-radius: 20px;
 }
@@ -81,4 +85,21 @@ p {
   font-size: 1.3rem;
   font-weight: 600;
   padding-bottom: 1rem;
+}
+
+/* Mobile Tablet */
+@media screen and (max-width: 1335px) {
+  input {
+    font-size: 2.5rem;
+  }
+  .dollar-container {
+    width: 50%;
+  }
+}
+
+/* Mobile Smartphone */
+@media screen and (max-width: 835px) {
+  .card {
+    margin: 0.8rem;
+  }
 }
